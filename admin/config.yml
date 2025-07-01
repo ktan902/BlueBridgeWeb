@@ -21,4 +21,4 @@ collections:
         fields:
           - label: Page Content
             name: body
-            widget: code
+            widget: markdown
