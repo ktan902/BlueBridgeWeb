@@ -14,9 +14,7 @@ collections:
         name: "home"
         file: "index.html"
         fields:
-       
-		 
-		  - {name: "editable_div", label: "Main Text Block", widget: "markdown"}
+      - {name: "editable_div", label: "Main Text Block", widget: "markdown"}
 		  
 	
  
