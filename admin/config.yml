@@ -21,5 +21,4 @@ collections:
         fields:
           - label: Page Content
             name: body
-            widget: code
-            default: html
+            widget: html
