@@ -16,11 +16,11 @@ collections:
           - label: "Page Content"
             name: "body"
             widget: markdown
-			
-	  - name: "contact"
+
+      - name: "contact"
         label: "Contact"
         file: "contact.html"
         fields:
           - label: "Page Content"
             name: "body"
-            widget: markdown 
+            widget: markdown
