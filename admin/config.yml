@@ -14,7 +14,7 @@ collections:
         name: "home"
         file: "index.html"
         fields:
-         - { label: "Content", name: "editable-section", widget: "markdown" }  # WYSIWYG enabled
+         - { label: "Content", name: "body", widget: "markdown" }  # WYSIWYG enabled
 		 
 		  
 	
