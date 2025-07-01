@@ -16,8 +16,8 @@ collections:
         fields:
          - { label: "Content", name: "body", widget: "markdown" }  # WYSIWYG enabled
 		 
-		  - {name: "editable_div"
-            label: "Main Text Block"
+		  - {name: "editable_div",
+            label: "Main Text Block",
             widget: "markdown"}
 		  
 	
