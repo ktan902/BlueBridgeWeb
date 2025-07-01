@@ -14,7 +14,8 @@ collections:
         name: "home"
         file: "index.html"
         fields:
-      - {name: "editable_div", label: "Main Text Block", widget: "markdown"}
+         - { label: "Content", name: "editable_div", widget: "markdown" }  # WYSIWYG enabled
+		 
 		  
 	
  
