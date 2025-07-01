@@ -24,3 +24,4 @@ collections:
           - label: "Page Content"
             name: "body"
             widget: code
+			default_language: html
