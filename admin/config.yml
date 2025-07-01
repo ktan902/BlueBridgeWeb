@@ -14,7 +14,10 @@ collections:
         name: "home"
         file: "index.html"
         fields:
-         - { label: "Content", name: "body", widget: "markdown" }  # WYSIWYG enabled
+       - name: "body"
+            label: "Main Content"
+            widget: markdown
+            buttons: ["bold", "italic", "heading-one", "heading-two", "link", "quote", "code"]
 		 
 		  
 	
