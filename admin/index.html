@@ -2,14 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Content Manager</title>
-    <script src="https://unpkg.com/netlify-cms@^2.10.192/dist/netlify-cms.js"></script>
+    <title>Site Admin</title>
   </head>
   <body>
-    <div id="nc-root"></div>
+    <script src="https://unpkg.com/netlify-cms@2.15.72/dist/netlify-cms.js"></script>
     <script>
       window.CMS_MANUAL_INIT = true;
-      CMS.init(); // ✅ correct object name
+      window.addEventListener('load', function () {
+        if (typeof CMS !== 'undefined') {
+          CMS.init();
+        } else {
+          console.error('CMS not loaded');
+        }
+      });
     </script>
+    <div id="nc-root"></div>
   </body>
 </html>
