@@ -4,6 +4,7 @@ backend:
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
+site_url: https://bluebridgesite.netlify.app
 
 collections:
   - name: "pages"
