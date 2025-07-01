@@ -12,7 +12,7 @@ collections:
     files:
       - label: "Home"
         name: "home"
-        file: "index.html"
+       file: "content/home.md"
         fields:
        - name: "body"
             label: "Main Content"
