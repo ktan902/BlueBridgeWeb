@@ -1,30 +1,30 @@
-  backend:
-    name: git-gateway
-    branch: main
+backend:
+  name: git-gateway
+  branch: main
 
-  media_folder: "images/uploads"
-  public_folder: "/images/uploads"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
-  collections:
-    - name: "pages"
-      label: "Pages"
-      files:
-        - name: "home"
-          label: "Home Page"
-          file: "content/home.md"
-          fields:
-            - label: "Page Content"
-              name: "body"
-              widget: markdown
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Home Page"
+        file: "content/home.md"
+        fields:
+          - label: "Page Content"
+            name: "body"
+            widget: markdown
 
-        - name: "contact"
-          label: "Contact"
-          file: "contact.html"
-          fields:
-            - label: "Page Content"
-              name: "body"
-              widget: code
-              default: html
+      - name: "contact"
+        label: "Contact"
+        file: "contact.html"
+        fields:
+          - label: "Page Content"
+            name: "body"
+            widget: code
+            default: html
 
 
 
