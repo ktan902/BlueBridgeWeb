@@ -147,10 +147,70 @@ But of course email and a call would work just as well too.</p>
                         <br>
                     </p>
 					
+					<br><br><br><br>
 					
+				<form name="contact" method="POST" data-netlify="true" netlify-recaptcha id="contact-form">
+    <input type="hidden" name="form-name" value="contact" />
+
+    <p>
+      <label>Your Namezzz:<br>
+        <input type="text" name="name" required>
+      </label>
+    </p>
+
+    <p>
+      <label>Your Email:<br>
+        <input type="email" name="email" required>
+      </label>
+    </p>
+
+    <p>
+      <label>Your Message:<br>
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+    </p>
+
+    <!-- Netlify reCAPTCHA widget -->
+    <div data-netlify-recaptcha="true"></div>
+
+    <p>
+      <button type="submit">Send</button>
+    </p>
+
+    <div id="form-status" style="margin-top:1em;"></div>
+  </form>
 					
-				
-			
+		 <!-- AJAX Form Submission Script -->
+  <script>
+  document.getElementById("contact-form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const status = document.getElementById("form-status");
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data).toString()
+      });
+
+      const text = await response.text();
+
+      if (text.includes("Captcha verification failed")) {
+        status.innerHTML = "<p style='color:red;'>Please complete the CAPTCHA before submitting.</p>";
+      } else if (response.ok) {
+        status.innerHTML = "<p style='color:green;'>Thanks for your message! We'll get back to you soon.</p>";
+        form.reset();
+      } else {
+        status.innerHTML = "<p style='color:red;'>Submission failed. Please try again later.</p>";
+      }
+    } catch (error) {
+      status.innerHTML = "<p style='color:red;'>Network error. Please try again later.</p>";
+    }
+  });
+</script>	
 					
                 </div>
             </section>
