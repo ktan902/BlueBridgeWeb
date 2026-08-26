@@ -148,13 +148,16 @@
       <label for="message">Message</label>
       <textarea id="message" name="message" placeholder="Drop Your Message..." required></textarea>
 
-      <div class="checkbox-row">
+   <!--   <div class="checkbox-row">
         <input type="checkbox" id="terms" name="terms" required>
         <label for="terms">I've read and agree with <a href="#" target="_blank">terms &amp; privacy policy</a></label>
-      </div>
+      </div>-->
 
       <!-- Optional: friendlier "from name" in Formspark notification emails -->
       <input type="hidden" name="_email.subject" value="New TAO AU Contact Form Submission">
+		
+		  <input type="checkbox" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off" />
+
 
       <button type="submit">Send Message</button>
     </form>
